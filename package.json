@@ -1,0 +1,50 @@
+{
+  "name": "gulp-vue-file",
+  "version": "0.1.0",
+  "description": "Gulp plugin for compiling .vue file",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "eslint index.js test.js",
+    "preversion": "npm test",
+    "version": "standard-changelog && git add CHANGELOG.md",
+    "postversion": "git push && git push --tags && npm publish",
+    "pretest": "npm run lint",
+    "test": "tape test.js | tap-dot",
+    "coverage": "nyc --reporter=lcov tape test.js | tap-dot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dumberjs/gulp-vue-file"
+  },
+  "keywords": [
+    "vue",
+    "gulpplugin"
+  ],
+  "author": "Chunpeng Huo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dumberjs/gulp-vue-file/issues"
+  },
+  "homepage": "https://github.com/dumberjs/gulp-vue-file#readme",
+  "dependencies": {
+    "@vue/component-compiler": "^3.6.0",
+    "plugin-error": "^1.0.1",
+    "through2": "^3.0.0",
+    "vinyl-sourcemaps-apply": "^0.2.1",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "gulp": "^4.0.0",
+    "gulp-sort": "^2.0.0",
+    "node-sass": "^4.11.0",
+    "nyc": "^13.1.0",
+    "standard-changelog": "^2.0.6",
+    "stream-assert": "^2.0.3",
+    "tap-dot": "^2.0.0",
+    "tape": "^4.9.2"
+  }
+}
