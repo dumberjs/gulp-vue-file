@@ -40,7 +40,7 @@ test('gulpDumber compiles only vue file', t => {
 });
 
 test('gulpDumber compiles vue file with src attributes', t => {
-  gulp.src('test2/**/*.vue')
+  gulp.src('test2/**/*.vue', {sourcemaps: true})
   .pipe(gulpVue({
     style: {
       postcssPlugins: [url({url: 'inline'})]
@@ -51,8 +51,8 @@ test('gulpDumber compiles vue file with src attributes', t => {
     t.ok(f.contents.toString().includes("'John Doe'"));
     t.ok(f.contents.toString().includes(" color: red;"));
     t.ok(f.contents.toString().includes("data:image/png;base64,"));
-    // didn't turn on sourcemaps on gulp.src
-    t.notOk(f.sourceMap);
+    t.deepEqual(f.sourceMap.sources, ['folder/test.vue']);
+    t.equal(f.sourceMap.file, 'folder/test.js');
   }))
   .pipe(streamAssert.end(t.end));
 });
