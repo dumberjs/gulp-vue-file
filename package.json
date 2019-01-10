@@ -42,6 +42,7 @@
     "gulp-sort": "^2.0.0",
     "node-sass": "^4.11.0",
     "nyc": "^13.1.0",
+    "postcss-url": "^8.0.0",
     "standard-changelog": "^2.0.6",
     "stream-assert": "^2.0.3",
     "tap-dot": "^2.0.0",

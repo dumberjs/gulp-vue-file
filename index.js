@@ -24,10 +24,15 @@ module.exports = function (opts) {
       if (file.extname === '.vue') {
         const content = file.contents.toString();
 
+        // need to use localPath instead of file.relative (relative to file.base)
+        // as vue compiler needs the path to be related to process.cwd() in order
+        // for additional resources locating.
+        const localPath = path.relative(file.cwd, file.path);
+
         const result = assemble(
           vueCompiler,
-          file.path,
-          vueCompiler.compileToDescriptor(file.path, content),
+          localPath,
+          vueCompiler.compileToDescriptor(localPath, content),
           {normalizer, styleInjector, styleInjectorSSR}
         );
 
@@ -40,9 +45,12 @@ module.exports = function (opts) {
           // @vue/component-compiler doesn't insert sourcesContent.
           // I don't quite understand.
           if (!map.sourcesContent) map.sourcesContent = [content];
-          // Normalize file path
-          map.sources = map.sources.map(f => path.relative(file.base, f));
-          map.file = file.basename;
+          // Normalize file path to relative to base.
+          // This is to match the default behaviour of gulp source map.
+          map.sources = map.sources.map(f =>
+            normalize(path.relative(file.base, path.resolve(file.cwd, f)))
+          );
+          map.file = normalize(file.relative);
           applySourceMap(file, map);
         }
       }
@@ -51,3 +59,7 @@ module.exports = function (opts) {
     cb(null, file);
   });
 };
+
+function normalize(path) {
+  return path.replace(/\\/g, '/');
+}
