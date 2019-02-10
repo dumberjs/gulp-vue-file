@@ -34,18 +34,18 @@
     "plugin-error": "^1.0.1",
     "through2": "^3.0.0",
     "vinyl-sourcemaps-apply": "^0.2.1",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.6.4"
   },
   "devDependencies": {
-    "eslint": "^5.12.0",
+    "eslint": "^5.13.0",
     "gulp": "^4.0.0",
     "gulp-sort": "^2.0.0",
     "node-sass": "^4.11.0",
-    "nyc": "^13.1.0",
+    "nyc": "^13.2.0",
     "postcss-url": "^8.0.0",
     "standard-changelog": "^2.0.6",
     "stream-assert": "^2.0.3",
     "tap-dot": "^2.0.0",
-    "tape": "^4.9.2"
+    "tape": "^4.10.0"
   }
 }
