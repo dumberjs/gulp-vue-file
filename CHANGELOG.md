@@ -1,3 +1,7 @@
+## [0.1.4](https://github.com/dumberjs/gulp-vue-file/compare/v0.1.3...v0.1.4) (2019-04-30)
+
+
+
 ## [0.1.3](https://github.com/dumberjs/gulp-vue-file/compare/v0.1.2...v0.1.3) (2019-01-10)
 
 
