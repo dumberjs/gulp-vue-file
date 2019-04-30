@@ -30,22 +30,21 @@
   },
   "homepage": "https://github.com/dumberjs/gulp-vue-file#readme",
   "dependencies": {
-    "@vue/component-compiler": "^3.6.0",
+    "@vue/component-compiler": "^4.0.0",
     "plugin-error": "^1.0.1",
-    "through2": "^3.0.0",
+    "through2": "^3.0.1",
     "vinyl-sourcemaps-apply": "^0.2.1",
-    "vue-template-compiler": "^2.6.4"
+    "vue-template-compiler": "^2.6.10"
   },
   "devDependencies": {
-    "eslint": "^5.13.0",
-    "gulp": "^4.0.0",
+    "eslint": "^5.16.0",
+    "gulp": "^4.0.1",
     "gulp-sort": "^2.0.0",
-    "node-sass": "^4.11.0",
-    "nyc": "^13.2.0",
+    "nyc": "^14.0.0",
     "postcss-url": "^8.0.0",
-    "standard-changelog": "^2.0.6",
+    "standard-changelog": "^2.0.7",
     "stream-assert": "^2.0.3",
     "tap-dot": "^2.0.0",
-    "tape": "^4.10.0"
+    "tape": "^4.10.1"
   }
 }
