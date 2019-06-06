@@ -44,6 +44,6 @@
     "standard-changelog": "^2.0.11",
     "stream-assert": "^2.0.3",
     "tap-dot": "^2.0.0",
-    "tape": "^4.10.1"
+    "tape": "^4.10.2"
   }
 }
