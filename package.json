@@ -36,14 +36,14 @@
     "vue-template-compiler": "^2.6.10"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
+    "eslint": "^6.1.0",
     "gulp": "^4.0.2",
     "gulp-sort": "^2.0.0",
     "nyc": "^14.1.1",
     "postcss-url": "^8.0.0",
-    "standard-changelog": "^2.0.11",
+    "standard-changelog": "^2.0.13",
     "stream-assert": "^2.0.3",
     "tap-dot": "^2.0.0",
-    "tape": "^4.10.2"
+    "tape": "^4.11.0"
   }
 }
