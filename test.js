@@ -6,7 +6,7 @@ const sort = require('gulp-sort');
 const url = require('postcss-url');
 const gulpVue = require('./index');
 
-test('gulpDumber does not support streaming', t => {
+test('gulpVue does not support streaming', t => {
   gulp.src('test1/**/*.vue', {buffer: false})
   .pipe(gulpVue())
   .once('error', function (err) {
@@ -15,7 +15,7 @@ test('gulpDumber does not support streaming', t => {
   });
 });
 
-test('gulpDumber compiles only vue file', t => {
+test('gulpVue compiles only vue file', t => {
   gulp.src('test1/**/*.{js,vue}', {sourcemaps: true})
   .pipe(sort()) // sort files for asserting
   .pipe(gulpVue())
@@ -39,7 +39,7 @@ test('gulpDumber compiles only vue file', t => {
   .pipe(streamAssert.end(t.end));
 });
 
-test('gulpDumber compiles vue file with src attributes', t => {
+test('gulpVue compiles vue file with src attributes', t => {
   gulp.src('test2/**/*.vue', {sourcemaps: true})
   .pipe(gulpVue({
     style: {
