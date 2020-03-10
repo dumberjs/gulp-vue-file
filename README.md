@@ -1,4 +1,4 @@
-# gulp-vue-file [![Build Status](https://travis-ci.org/dumberjs/gulp-vue-file.svg?branch=master)](https://travis-ci.org/dumberjs/gulp-vue-file)
+# gulp-vue-file ![CI](https://github.com/dumberjs/gulp-vue-file/workflows/CI/badge.svg)
 
 Gulp plugin for compiling .vue file. This plugin simply wraps `@vue/component-compiler`.
 
